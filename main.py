@@ -7,7 +7,8 @@ book_phones = {
     names[2]: phones[2],
     names[3]: phones[3],
     names[4]: phones[4],
-
 }
 
-print(book_phones)
+user_name = input('Введите имя:  ')
+if user_name in book_phones:
+    print(f'phones: {book_phones[user_name]}')
