@@ -9,6 +9,18 @@ book_phones = {
     names[4]: phones[4],
 }
 
-user_name = input('Введите имя:  ')
-if user_name in book_phones:
-    print(f'phones: {book_phones[user_name]}')
+name = input('Введите имя: ')
+phone = input('Введите номер телефона (или пусто): ')
+
+if name and phone:
+    book_phones[name] = phone
+
+elif name not in book_phones and phone == '':
+    print("Нет в телефонной книге")
+
+elif name in book_phones and phone == '':
+    print(book_phones[name])
+
+print(book_phones)
+
+
