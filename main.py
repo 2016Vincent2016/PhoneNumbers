@@ -19,8 +19,5 @@ elif name not in book_phones and phone == '':
     print("Нет в телефонной книге")
 
 elif name in book_phones and phone == '':
-    print(book_phones[name])
-
-print(book_phones)
-
-
+    for key in book_phones:
+        print(f'{key}: {book_phones[key]}')
